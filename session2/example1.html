@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XYZ</title>
+  </head>
+  <body>
+    <!--Anchor Tag-->
+    <h1>Anchor Tag</h1>
+    <a href="https://en.wikipedia.org/wiki/Priyanka_Chopra">Priyanka_Chopra</a>
+
+    <hr />
+
+    <!--List - display a set items-->
+    <!--2 types of list -> 1. ordered list 2. unordered list-->
+    <!--order list-->
+    <h1>Ordered List</h1>
+    <ol>
+      <!--List items-->
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+    </ol>
+
+    <!--unordered list-->
+    <h1>Unordered List</h1>
+    <ul>
+      <!--List items-->
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+      <li>Item 1</li>
+    </ul>
+
+    <!--Nested list -> 1. Item 1 -->
+    <h1>Nested List</h1>
+    <ol>
+      <!--List items-->
+      <li>
+        Item 1
+        <ol>
+          <li>Topic 1</li>
+          <li>Topic 1</li>
+          <li>Topic 1</li>
+        </ol>
+      </li>
+      <li>
+        Item 2
+        <ul>
+          <li>Topic 1</li>
+          <li>Topic 1</li>
+          <li>Topic 1</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!--description list-->
+    <h1>Description List</h1>
+    <dl>
+      <!--description title -->
+      <dt>Coffee</dt>
+      <!--description data-->
+      <dd>Its black</dd>
+      <dd>It comes in different forms</dd>
+    </dl>
+
+    <hr />
+
+    <!--Table -->
+    <h1>Table</h1>
+    <table>
+      <!--Table row-->
+      <tr>
+        <!--Table Heading -->
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <!--table data-->
+        <td>Rhea</td>
+        <td>Sidana</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <!--table data-->
+        <td>Seema</td>
+        <td>Sidana</td>
+        <td>34</td>
+      </tr>
+      <tr>
+        <!--table data-->
+        <td colspan="2">Reema</td>
+        <td>34</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <!-- form -->
+    <h1>Form</h1>
+    <form>
+      <label for="f_name"> First Name: </label>
+      <input
+        type="text"
+        id="f_name"
+        name="f_name"
+        placeholder="Enter your first name"
+      />
+      <br />
+
+      <label for="address"> Address: </label>
+      <textarea rows="4" cols="50" name="address">
+            Enter your address here!
+        </textarea>
+      <br />
+
+      <label for="Gender"> Gender: </label>
+      <!--select dropdown-->
+      <select name="dropdown">
+        <option value="Female">Females</option>
+        <option value="Other">Others</option>
+        <option value="Male" selected>Males</option>
+      </select>
+      <br />
+
+      <label for="Gender"> Gender: </label>
+      <input list="user_gender" name="gender" id="select-gender" />
+      <!--datalist-->
+      <datalist id="user_gender">
+        <option value="Female" />
+        <option value="Other" />
+        <option value="Male" />
+      </datalist>
+
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
