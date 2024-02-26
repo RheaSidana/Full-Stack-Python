@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            XYZ
+        </title>
+        <style>
+            h3{
+                /* units: px, em, %, rem */
+                font-size: 30px;
+            }
+
+            div{
+                font-size: 30px;
+            }
+
+            p{
+                /* 10% * 30px = 3px */
+                /* font-size: 10%; */
+
+                /* 1em = parent font-size
+                1em = 30px 
+                1.5em = 30 + 15 px = 45px
+                */
+                /* font-size: 1.5em; */
+
+                /* rem = root element
+                1rem = root element font-size 
+                1.2rem = root element font-size * 1.2
+                */
+                font-size: 1.2rem;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <h3> Heading 3</h3>
+
+        <div>
+            I am outside paragraph.
+            <p>I am paragraph</p>
+        </div>
+    </body>
+</html>
