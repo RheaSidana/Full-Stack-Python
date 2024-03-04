@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XYZ</title>
+  </head>
+  <body>
+    <!--container-->
+    <div
+      style="
+        padding: 10em;
+        display: flex;
+        flex-direction: column;
+        background-color: blueviolet;
+      "
+    >
+      <h1 style="background-color: bisque">Rotate</h1>
+      <!--rotation-->
+      <div
+        style="
+          display: flex;
+          flex-direction: rows;
+          justify-content: space-around;
+          background-color: brown;
+        "
+      >
+        <div style="width: 300px; height: 300px; background-color: aqua">
+          Div 1
+        </div>
+        <div
+          style="
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            transform: rotate(120deg);
+          "
+        >
+          Div 1
+        </div>
+      </div>
+
+      <h1 style="background-color: bisque">Translate</h1>
+      <!--Translate-->
+      <div
+        style="display: flex; flex-direction: column; background-color: brown"
+      >
+        <div style="width: 300px; height: 300px; background-color: aqua">
+          Div 2
+        </div>
+
+        <div
+          style="
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            transform: translate(100px, 100px);
+          "
+        >
+          Div 2
+        </div>
+      </div>
+
+      <br /><br /><br /><br /><br /><br />
+
+      <h1 style="background-color: bisque">scale</h1>
+      <!--scale-->
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          background-color: brown;
+        "
+      >
+        <div style="width: 300px; height: 300px; background-color: aqua">
+          Div 3
+        </div>
+
+        <div
+          style="
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            /* transform: scale(1.3, 1); */
+            transform: scale(1.3);
+          "
+        >
+          Div 3
+        </div>
+      </div>
+
+      <br /><br /><br /><br /><br /><br />
+      
+      <h1 style="background-color: bisque">skew</h1>
+      <!--skew-->
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          background-color: brown;
+        "
+      >
+        <div style="width: 300px; height: 300px; background-color: aqua">
+          Div 4
+        </div>
+
+        <div
+          style="
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            transform: skew(20deg, 20deg);
+          "
+        >
+          Div 4
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
