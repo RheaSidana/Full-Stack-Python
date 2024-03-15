@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XYZ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // select  ->  define the action associated with the element
+      // (selector) access the element -> tag (html tag), id (#idName), class (.className)
+      // action -> hide, show, slide, fade
+      // $(selector).action()
+      $(document).ready(function () {
+        $("#myID").hide();
+        $("div").slideUp();
+
+        // mouse: click, dblclick, mouseenter, mouseleave, hover (mouseenter+mouseleave)
+        // keyboard: keypress, keydown, keyup
+        // form: submit, change (input tag), focus (click on the input tag), blur (input tag: blur)
+        // document/window: load, resize, scroll, unload
+        $("#myBtn").mouseenter(function () {
+          // $("#myID").show()
+          // $("#myID").toggle();
+
+          // parameter: speed, callback fn
+          //   $("div").fadeIn(4000); // 4s - speed (milliseconds)
+          //   $("div").fadeOut("fast"); // slow, fast
+
+          //fadeTo: parameter: speed, opacity, callback fn
+          // $("div").fadeTo("fast", 0.1);
+
+          // $("div").slideDown();
+          // parameter: speed, callback
+          //   $("div").slideToggle(6000);
+
+          // slideDown -> slideUp -> slideDown -> fadeTo
+          $("div")
+            .slideDown(3000)
+            .slideUp(3000)
+            .slideDown(3000)
+            .fadeTo("fast", 0.1);
+        });
+
+        $("#stopBtn").click(function () {
+          $("div").stop();
+        });
+      });
+    </script>
+    <style>
+      div {
+        padding: 5px;
+        font-size: 18px;
+        background-color: #555;
+        color: black;
+        border: solid 1px #666;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="myID">I am p tag with id</p>
+    <p>I am p tag</p>
+
+    <button id="myBtn">Click Me</button>
+    <button id="stopBtn">Stop Btn</button>
+    <div>
+      <!-- <h1>I am h1</h1> -->
+      I am text in div tag
+    </div>
+  </body>
+</html>

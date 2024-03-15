@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XYZ</title>
+    </head>
+    <body>
+        <p>
+            I am paragraph 1
+            <!--h1-->
+        </p>
+        <p>I am paragraph 2</p> <!-- replacing -->
+        <p>I am paragraph 3</p> <!-- remove -->
+        <script>
+            // events
+            // document.getElementsByTagName("p")[0].onclick = function modifyByOurCustomText(){
+            //     document.getElementsByTagName("p")[0].innerText = "My modified paragraph.";
+            //     document.body.removeChild(document.getElementsByTagName("p")[2]);
+            // };
+
+            //eventListener
+            document.getElementsByTagName("p")[0].addEventListener("click", function modifyByOurCustomText(){
+                document.getElementsByTagName("p")[0].innerText = "My modified paragraph.";
+                document.body.removeChild(document.getElementsByTagName("p")[2]);
+            });
+
+            let myH1tag = document.createElement("h1");
+            myH1tag.innerText = "My heading 1!!";
+
+            document.body.appendChild(myH1tag);
+
+            let anotherH1tag = document.createElement("h1");
+            anotherH1tag.innerText = "My another heading 1!!";
+            document.getElementsByTagName("p")[0].appendChild(anotherH1tag);
+
+            /* 
+            <p>
+                <h1>I am text in h1 tag</h1>
+                I am text in p tag
+            </p>
+            */
+            let replacingPtag = document.createElement("p");
+            replacingPtag.innerHTML = "<h1>I am text in h1 tag</h1>I am text in p tag";
+            replacingPtag.style.backgroundColor = "pink";
+            document.body.replaceChild(replacingPtag, document.getElementsByTagName("p")[1]);
+        </script>
+    </body>
+</html>
