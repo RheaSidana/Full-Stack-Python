@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XYZ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .myStyleClass {
+            background-color: aqua;
+        }
+    </style>
+    <script>
+      /*
+            $(selector).action()
+            */
+      $(document).ready(function () {
+        // get
+        $(".pClass").click(function () {
+          alert("P tag contains: \n" + $(".pClass").text());
+        });
+
+        // $(".btnClass").click(function () {
+        //   //   alert("P tag contains: \n" + $("#pID").html());
+        //   //   alert("P tag contains: \n" + $("#pID").text());
+        //   // alert("name input tag contains: " + $("#name").val()); // only input tags
+        //   alert("name input tag contains (type): " + $("#name").attr("type"));
+        //   alert(
+        //     "name input tag contains (placeholder): " +
+        //       $("#name").attr("placeholder")
+        //   );
+        // });
+
+        $(".btnClass").click(function(){
+            alert("Content: "+ $(".pClass").html());
+        })
+
+        //set
+        $("#btnSetId").click(function () {
+            // alert("btn clicked");
+            // $("img").attr("alt", "I am alt text using set");
+            // $("#name").val("No name");
+            // $(".pClass").html("I am passed using jquery <h1>I am heading 1</h1> <img src=\"\" alt=\"I am alt text\" />");
+            // $(".pClass").text("I am passed using jquery");
+
+            // alert("Document contains: " + $("body").html());
+            // // $(selector).remove()
+            // // $(".pClass").remove();
+
+            // // $(selector).empty()
+            // $("#pID").empty();
+            // $("#pID").text("I am text after empty");
+
+            // alert("Document contains: " + $("body").html());
+            
+            
+            // $("img").after("Some text after img tag");
+            // // $("img").before("Some text before img tag");
+            // // $("#pID").append("Some text at the end in pID tag");
+            // // $("#pID").prepend("Some text before comment tag");
+            // alert("Document contains: " + $("body").html());
+
+            // $(".pClass").css("background-color", "red");
+            // $(".pClass").css({"background-color": "red", "color": "white"});
+
+            // // let cssprop = ;
+            // // let cssprop = $(".pClass").css("color");
+            // alert("Css properties to .pClass tag: " + $(".pClass").css("background-color"));
+
+            $("#pID").addClass("myStyleClass");
+          });
+
+          $("#btnRemoveId").click(function(){
+            $("#pID").removeClass("myStyleClass");
+          });
+
+          $("#btnToggleId").click(function(){
+            $("#pID").toggleClass("myStyleClass");
+          })
+      });
+    </script>
+  </head>
+  <body>
+    <p>I am p tag 1</p>
+    <p class="pClass">I am p tag with class</p>
+    <p id="pID">
+      <!-- <h3>I am header in p tag</h3> -->
+      <img src="" alt="" />
+      I am p tag with id I am after h3 tag.
+    </p>
+    <input type="text" id="name" name="name" placeholder="Enter the name" />
+    <button class="btnClass">My Button : Get</button>
+    <button id="btnSetId">My Button : Set</button>
+    <button id="btnRemoveId">My Button : Remove</button>
+    <button id="btnToggleId">My Button : Toggle</button>
+  </body>
+</html>
