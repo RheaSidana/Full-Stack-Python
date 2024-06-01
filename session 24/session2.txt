@@ -5,4 +5,7 @@
         or - git add -p
      - Staged files
         - view all staged files - git status
-4.  remove unneccessary file/ folder for the staged 
+4.  remove unneccessary file/ folder for the staged - unstaging files
+        - git restore --staged filename.ext
+5.  remove all files from staging - git reset
+6.  finalised our files that needs to be pushed on the repository
