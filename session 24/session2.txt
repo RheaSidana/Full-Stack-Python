@@ -8,4 +8,11 @@
 4.  remove unneccessary file/ folder for the staged - unstaging files
         - git restore --staged filename.ext
 5.  remove all files from staging - git reset
-6.  finalised our files that needs to be pushed on the repository
+6.  finalised our files that needs to be pushed on the repository 
+        - git commit -m "[Rhea]: add ...."
+7.  create a branch
+        - git checkout -b example
+8.  view all branches 
+        - git branch -a
+9.  switch to a particular branch   
+        - git checkout main
