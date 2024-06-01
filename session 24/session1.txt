@@ -1,0 +1,67 @@
+drop, truncate and delete
+
+delete - remove all or selected rows from the table
+        - delete all the rows = we have the empty table
+drop - remove the table from the database
+truncate - 1. drop the table - 2. create the table 
+        - we have empty table 
+
+
+CREATE:
+1. database: 
+    create database session24example;
+2. table:
+    Structure: 
+    Table name : Employees
+    Unique ID: Id   - Primary Key - EMP_001
+    Other Fields: first_name, last_name, email
+
+create table Employees (
+ ID varchar(7) primary key,
+ first_name varchar(50),
+ last_name varchar(50),
+ email varchar(100)
+);
+
+Structure: 
+    Table name: Address
+    Unique Id: Id - Primary key - 1, 2, 3 
+    Other fields: house_no, street, city, 
+                    state, country
+
+create table Address(
+ ID int primary key,
+ house_no int,
+ street varchar(100),
+ city varchar(80),
+ state varchar(100),
+ country varchar(100)
+);
+
+- adding address column in Employees table
+    Alter table Employees
+        Add column 
+        address int references address(id);
+
+- modifying the size of the chars 
+of the column city in the Address table
+    Alter table Address
+        alter column
+        city type varchar(100);
+
+- insert values in employees
+    insert into employees(id, 
+        first_name, last_name, email)
+    values('EMP_001', 'Rhea', 
+        'Sidana', 'rhea@example.com'
+    );
+ - id - primary key = cannot be null or empty
+
+- view all rows in the table
+    select * from Employees;
+
+- update particular row 
+    Update Employees
+    Set address = 1
+    where id='EMP_001';
+

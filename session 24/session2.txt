@@ -1,0 +1,8 @@
+1.  create a repository on github.com 
+2.  create a file in our system  - local environment 
+3.  adding files to be pushed on the github repository
+        -cmd: git add .
+        or - git add -p
+     - Staged files
+        - view all staged files - git status
+4.  remove unneccessary file/ folder for the staged 
