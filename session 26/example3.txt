@@ -1,0 +1,31 @@
+Forms:
+
+    HTML Tag                Django Field Type
+
+1. Checkbox                 BooleanField
+2. TextInput                CharField
+3. Select                   ChoiceField
+4. DateTime                 DateTimeField
+5. Date                     DateField
+6. Email                    EmailField
+7. Password                 PasswordField
+8. NumberInput(3.4)         DecimalField, FloatField
+9. File                     FileField
+10. TimeDuration            DurationField
+11. Numbers(4,6)            IntegerField
+12. Image                   ImageField
+13. Time                    TimeField
+14. URL                     URLField
+15. SelectMutiple           MultipleChoiceField
+16. IP Address              GenericIPAddressField
+
+Request Method
+GET - the form values are appended to the url after submitting the form 
+    - www.myUrl.com/hdjuhdfj/name?Rhea%20Sidana&age?30
+
+POST - the form values are not appended to the url after submitting the form
+    -    www.myUrl.com/hdjuhdfj/
+    - payload object = {
+        "name": "Rhea Sidana",
+        "age": 30
+    }

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All Destinations</title>
+        <link href="{% static 'style1.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <img src="{% static "payment-method.png" %}" alt="payment-method" />
+        {% if destionation_list %}
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        S.No
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for destination in destionation_list %}
+                <tr>
+                    {% with id=forloop.counter0|add:"1" %}
+                    <td> <a href="{% url 'destination' id %}" >
+                        {{id}}</a>
+                    </td>
+                    <td>{{destination}}</td>
+                    {% endwith %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <h1>No Destinations Found</h1>
+        {% endif %}
+    </body>
+</html>

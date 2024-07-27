@@ -1,0 +1,18 @@
+{% extends "main.html" %} 
+
+{% comment %} <!DOCTYPE html>
+<html>
+  <head>
+    <title>Destinations</title>
+  </head>
+  <body>
+    <h1>{{destination}}</h1>
+  </body>
+</html>
+{% endcomment %} 
+
+{% block title %}Destinations{% endblock title %} 
+
+{% block content %}
+{% include "heading1.html" with heading=destination %}
+{% endblock content %}

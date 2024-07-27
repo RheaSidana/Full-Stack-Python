@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Flights</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for flight_details in flights %}
+            {% with id=forloop.counter0|add:"1" %}
+                <tr>
+                    <td>
+                        <a href="{% url 'flight' forloop.counter0 %}">
+                        {% comment %} <a href="{% url flight i %}"> {% endcomment %}
+                            {% comment %} {{i}} {% endcomment %}
+                            {{id}}
+                        </a>
+                    </td>
+                    <td>{{ flight_details }}</td>
+                </tr>
+                {% endwith %}
+            {% endfor %}
+        </tbody>
+</body>
+
+</html>

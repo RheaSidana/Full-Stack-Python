@@ -1,0 +1,19 @@
+users model: user authentication, handling passwords, authorization 
+
+password: admin123@R
+
+hashed password algorithm: pbkdf2_sha256
+pbkdf2_sha256$720000$z7kYX7xEcC1WsFd6gsaEt5$xwmJhnUAQf5KkkCV8ucuvIkePK/BO/GmPZ3mlyDt0QA=
+-> our password is safe, even if the users table is compromised 
+
+username: admin3
+email: admin3@example.com
+password: admin@3#R
+
+username: rhea123
+email: rhea123@example.com
+password: Rhea@456
+
+command: drop table django_session CASCADE;
+
+https://testdriven.io/blog/django-custom-user-model/

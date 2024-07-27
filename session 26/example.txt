@@ -1,0 +1,6 @@
+
+Custom Filters
+- created by developer and are not built-in
+- create - reusability 
+- manipulating the data in the template
+

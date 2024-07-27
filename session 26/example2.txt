@@ -1,0 +1,45 @@
+Shell Scripting:
+
+adding values to the model/table using commands
+
+Command to open the Shell
+->  py manage.py shell
+
+** Save an object/ a rows
+Country(name = "India", country_code = 91, currency = "Indian Rupees").save()
+
+** save multiple object / rows
+[countryObj.save() for countryObj in [Country(name = "Canada", country_code = 1, currency = "Canadian Dollar"),Country(name = "Australia", country_code = 61, currency = "Australian Dollar")]]
+
+** View all the objects/rows in the db **
+from destinations.models import Country
+Country.objects.all()
+Output: <QuerySet []>
+
+QuesrySet = set -> collection of rows/ data that is stored in the db
+-> list of objects
+-> helps in filtering the rows for desired Output at an early stage.
+
+** Get a particular object 
+1. Specific Row
+    a. as a QuesrySet: objCountry = Country.objects.filter(country_code=91)
+    b. as a Class object: objCountry = Country.objects.filter(country_code=91)[0]
+
+    Adding n number of filters
+    Destination.objects.filter(address=objAddress, name="Red Fort")
+
+2. Specific column: Country.objects.values_list('currency')
+
+3. 2 destination is having an Address -> Delhi, India
+    2 destination is having an Address -> Punjab, Pakistan
+    2 destination are having an Address -> Alaska, USA
+
+    Display all the destinations -> India or USA
+    Destination.objects.filter(address=objAddressIndia) | Destination.objects.filter(address=objAddressUSA)
+
+4. order the rows in some pattern
+    a. ascending order: Country.objects.all().order_by('name').values()
+    b. descending order: Country.objects.all().order_by('-name').values()
+
+Delete an object / a row from the db
+Country.objects.filter(country_code=1)[0].delete() 

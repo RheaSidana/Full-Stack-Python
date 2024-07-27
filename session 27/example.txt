@@ -1,0 +1,20 @@
+django
+psycog psycog2
+
+pip install python-dotenv
+pip freeze > requirements.txt
+
+python-dotenv
+- searches for a file with the extension -> .env
+- .env file -> contains the set of constants, that should not be revealed to 
+anyone on the internet
+
+https://supabase.com/
+
+psql -h "HOST" -p "PORT" -d "dbname" -U "user"
+-h : host
+-p : port
+-d : db name
+-U : user
+
+https://vercel.com/

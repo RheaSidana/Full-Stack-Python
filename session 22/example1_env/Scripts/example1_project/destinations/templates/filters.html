@@ -1,0 +1,131 @@
+{% load custom_filters %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Filters</title>
+    <link href="{% static 'style2.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <div>
+        <h1>String Filters</h1>
+        <h3>1. capfirst </h3>
+        <h3>{{StringFilter.capfirst}} -> {{StringFilter.capfirst|capfirst}}</h3>
+        <hr/>
+        <br/>
+        <h3>2. lower </h3>
+        <h3>{{StringFilter.lower_upper}} -> {{StringFilter.lower_upper|lower}}</h3>
+        <hr/>
+        <br/>
+        
+        <h3>3. upper </h3>
+        <h3>{{StringFilter.lower_upper}} -> {{StringFilter.lower_upper|upper}}</h3>
+        <hr/>
+        <br/>
+        
+        <h3>4. join </h3>
+        <h3>{{StringFilter.list_strings}} -> {{StringFilter.list_strings|join:" "}}</h3>
+        <hr/>
+        <br/>
+        
+        <h3>5. length </h3>
+        <h3>{{StringFilter.capfirst}} -> {{StringFilter.capfirst|length}}</h3>
+        <hr/>
+        <br/>
+        
+        <h3>6. wordcount </h3>
+        <h3>{{StringFilter.wordcount}} -> {{StringFilter.wordcount|wordcount}}</h3>
+        <hr/>
+        <br/>
+        
+    </div>
+    <div>
+        <h1>Integer Filters</h1>
+        <h3>1. add </h3>
+        <h3>{{IntegerFilter.adding}} -> {{IntegerFilter.adding|add:"3"}}</h3>
+        <hr/>
+        <br/>
+        
+        <h3>2. sub </h3>
+        <h3>{{IntegerFilter.adding}} -> {{IntegerFilter.adding|add:"-3"}}</h3>
+        <hr/>
+        <br/>
+
+    </div>
+    <div>
+        <h1>DateTime Filters</h1>
+        <h3>1. date </h3>
+        <h3>{{DateTimeFilter.dateTimeNow}} -> {{DateTimeFilter.dateTimeNow|date:"d m y"}}</h3>
+        <hr/>
+        <br/>
+        
+        <h3>2. time </h3>
+        <h3>{{DateTimeFilter.dateTimeNow}} -> {{DateTimeFilter.dateTimeNow|time:"H:i"}}</h3>
+        <hr/>
+        <br/>
+        
+        <h3>3. timesince </h3>
+        <h3>{{DateTimeFilter.previousDate}} -> {{DateTimeFilter.previousDate|timesince:DateTimeFilter.dateTimeNow}}</h3>
+        <hr/>
+        <br/>
+
+
+    </div>
+    <div>
+        <h1>List Filters</h1>
+        <h3>1. make_list </h3>
+        <h3>{{ListFilter.makeListInt}} -> {{ListFilter.makeListInt|make_list}}</h3>
+        <h3>{{ListFilter.makeListStr}} -> {{ListFilter.makeListStr|make_list}}</h3>
+        <hr/>
+        <br/>
+        
+        <h3>2. slice </h3>
+        <h3>{{ListFilter.makeListInt}} -> {{ListFilter.makeListInt|make_list|slice:":2"}}</h3>
+        <h3>{{ListFilter.makeListStr}} -> {{ListFilter.makeListStr|make_list|slice:"2:7"}}</h3>
+        <hr/>
+        <br/>
+        
+        <h3>3. first </h3>
+        <h3>{{ListFilter.makeListInt}} -> {{ListFilter.makeListInt|make_list|first}}</h3>
+        {% comment %} <h3>{{ListFilter.makeListStr}} -> {{ListFilter.makeListStr|make_list|slice:"2:7"}}</h3> {% endcomment %}
+        <hr/>
+        <br/>
+        
+        <h3>4. last </h3>
+        <h3>{{ListFilter.makeListInt}} -> {{ListFilter.makeListInt|make_list|last}}</h3>
+        {% comment %} <h3>{{ListFilter.makeListStr}} -> {{ListFilter.makeListStr|make_list|slice:"2:7"}}</h3> {% endcomment %}
+        <hr/>
+        <br/>
+        
+        <h3>5. length </h3>
+        <h3>{{ListFilter.makeListInt}} -> {{ListFilter.makeListInt|make_list|length}}</h3>
+        {% comment %} <h3>{{ListFilter.makeListStr}} -> {{ListFilter.makeListStr|make_list|slice:"2:7"}}</h3> {% endcomment %}
+        <hr/>
+        <br/>
+        
+        <h3>5. length </h3>
+        <h3>{{ListFilter.makeListInt}} -> {{ListFilter.makeListInt|make_list|join:":"}}</h3>
+        {% comment %} <h3>{{ListFilter.makeListStr}} -> {{ListFilter.makeListStr|make_list|slice:"2:7"}}</h3> {% endcomment %}
+        <hr/>
+        <br/>
+
+    </div>
+    <div>
+        <h1>UnorderedList Filters</h1>
+
+        <h3>{{UnorderedList}} -> {{UnorderedList|unordered_list}}</h3>
+        <br/>
+        <br/>
+    </div>
+    <div>
+        <h1>Custom Filters</h1>
+
+        <h3>{{CustomFilters.str1}} -> {{CustomFilters.str1|capital_words}}</h3>
+        <br/>
+        
+        <h3>{{CustomFilters.str2}} -> {{CustomFilters.str2|capital_words}}</h3>
+        <br/>
+        <br/>
+    </div>
+  </body>
+</html>

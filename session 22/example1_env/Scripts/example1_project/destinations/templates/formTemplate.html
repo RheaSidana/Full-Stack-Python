@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        
+        <form method="post">
+        {% comment %} <form action="/destinations/e/" method="post"> {% endcomment %}
+            {% csrf_token %}
+            {{form}}
+            <button type="submit">Submit</button>
+        </form>
+
+        {% for message in messages %}
+        <div>{{ message }}</div>
+        {% endfor %}
+    </body>
+</html>

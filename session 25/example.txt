@@ -1,0 +1,33 @@
+static files: images, css 
+
+they are always residing inside the static folder
+
+
+Template filers
+: modifying the values that are to be displayed to the end users.
+
+String:
+    1. capfirst : first letter become Capital
+    2. lower: caps to lower
+    3. upper: lower to caps 
+    4. join
+    5. length
+    6. wordcount
+Integer
+    1. add: addition ->  the value to be added should be in string 
+    2. sub: subtraction ->
+    3. div
+    4. mul
+DateTime
+    1. date
+    2. timeSince
+    3. time
+List
+    1.make_list: if no. then convert to string -> convert to list of char string 
+    2. Slice
+    3. first
+    4. last 
+    5. length
+    6. join #
+
+From a list we can create an "unordered_list" -> returns HTML <ul>
