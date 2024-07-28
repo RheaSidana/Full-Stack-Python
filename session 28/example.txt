@@ -1,0 +1,38 @@
+CBV: Class Based Views
+- alternative way of defining Views
+- classes instead of functions 
+    - OOPs concept (Object Oriented Principle)
+    - Encapsulation(Classes and Object)
+    - Inheritance
+    - Polymorphism
+    - Abstraction 
+- more modular, readability, extensible and reusablity 
+
+
+Types: (built-in)
+1. TemplateView: done 
+2. DetailView: done
+3. ListView: done
+4. CRUD Views
+    CRUD: Create Read Update Delete
+    In Views we are omitting Read -> View means we are displayiing 
+    something to the user
+    CreateView: done
+    UpdateView: 
+    DeleteView: 
+
+TemplateView:
+rendering the specified Template
+static pages, and simple views (no context data is required)
+
+Social Media: Description and an Image
+
+DetailView:
+Displaying the details - detailed view of a single object 
+class - > object
+model - class -> object
+
+Pagination: where we define the number of post to be displayed per page
+
+if the number of posts exceed the number of post per page then a new page is 
+available to us.

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Post</title>
+    <style>
+      .post-container {
+        max-width: 600px;
+        margin: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .post-header {
+        display: flex;
+        align-items: center;
+      }
+      .username {
+        font-weight: bold;
+        margin-left: 10px;
+      }
+      .post-img {
+        width: 100%;
+        border-radius: 5px;
+        margin: 10px 0;
+      }
+      .post-description {
+        margin: 10px 0;
+      }
+      .post-actions {
+        display: flex;
+        justify-content: space-between;
+      }
+      .post-actions button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #007BFF;
+      }
+      hr {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="post-container">
+      <div class="post-header">
+        <img
+          src="https://via.placeholder.com/40"
+          alt="User profile picture"
+          class="profile-pic"
+        />
+        <span class="username">Username</span>
+      </div>
+      <img
+        src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
+        alt="Mountain Lake"
+        class="post-img"
+      />
+      <p class="post-description">
+        This is a beautiful painting of a mountain lake with a stunning mountain background.
+      </p>
+      <hr />
+      <div class="post-actions">
+        <button>Like</button>
+        <button>Comment</button>
+        <button>Share</button>
+        <button>Save</button>
+      </div>
+    </div>
+  </body>
+</html>

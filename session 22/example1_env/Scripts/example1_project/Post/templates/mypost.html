@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Post</title>
+        <link href="{% static 'myPost.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="post-container">
+            <div class="post-header">
+              <img
+                src={{profie_pic}}
+                alt="User profile picture"
+                class="profile-pic"
+              />
+              <span class="username">{{username}}</span>
+            </div>
+            
+            <img
+              src="{{post_img}}"
+              alt="Mountain Lake"
+              class="post-img"
+            />
+            
+            <p class="post-description">
+              {{post_description}}
+            </p>
+            <hr />
+            <div class="post-actions">
+                <div>
+                    {{likes}} <button>Like</button>
+                </div>
+                <div>
+                    {{comments}} <button>Comment</button>
+                </div>
+                <div>
+                    {{share}} <button>Share</button>
+                </div>
+                <div>
+                    {{save}} <button>Save</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
