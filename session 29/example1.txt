@@ -1,0 +1,25 @@
+Debug Toolbar: 
+toolbar which helps us to debug,
+    - when an error occurs, 
+    - when we want to check which API is taking much more time than others
+    - sql query is effeting the performance of the page
+        - increasing load time
+        - pagination
+
+powerful
+- optimizing the application's efficiency
+- provides a set of panels in the toolbar
+- information about the current request/ response cycle.
+
+
+Type of information 
+1. SQL queries: 
+        view executed the queries 
+        time taken and query count
+
+2. Request and Response:  HTTP req detail, response header
+3. Tempates:  inspect which  templates were rendered and their context variables
+4. Static files: check static files information
+5. Signal: view the signal sent during the request
+6. Settings: Review your Django Settings
+7. Logging: 

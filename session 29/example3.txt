@@ -1,0 +1,80 @@
+comprehensive understanding of both the theoretical and 
+practical aspects of these technologies. 
+
+1. Build Project for your Portfolio: 
+- deployed on server like Vercel
+
+2.Know Your Projects:
+- Be ready to discuss your past projects in detail, particularly 
+those relevant to the job you're applying for.
+- Highlight specific challenges you faced and how you overcame them.
+
+3. Review Job Description:
+- Carefully read the job description and understand the key skills 
+and technologies required.
+- Prepare examples from your past experience that demonstrate 
+your proficiency in these areas.
+
+4. Practice Coding:
+- Regularly practice coding problems, especially those related 
+to algorithms, data structures, and language-specific features.
+- Use platforms like LeetCode, HackerRank, or CodeSignal.
+
+
+Backend with Python and Django
+Core Python:
+- Be well-versed with Python basics, including data types, 
+control flow, functions, OOP principles, and error handling.
+- Understand Python-specific features like list comprehensions, 
+decorators, and context managers.
+
+Django Framework:
+- Understand Django's MVT (Model-View-Template) architecture.
+- Be familiar with Django models, views, templates, forms, 
+and the admin interface.
+- Know how to work with Django ORM for database interactions.
+- Be prepared to discuss how you manage URLs and routing in Django.
+
+Security:
+- Understand common web security practices, such as CSRF protection
+- Know how to handle user authentication and authorization in Django.
+
+
+
+
+Frontend with HTML, CSS, Bootstrap, and JavaScript
+HTML & CSS:
+- Be proficient in writing semantic HTML and styling with CSS.
+- Understand CSS layout techniques, including Flexbox and Grid.
+- Be familiar with responsive design principles and media queries.
+
+Bootstrap:
+- Know how to use Bootstrap to quickly design responsive and modern 
+web interfaces.
+- Be familiar with Bootstrap components, grid system, and utility 
+classes.
+
+JavaScript:
+- Have a strong grasp of JavaScript fundamentals, including 
+ES6+ features.
+- Understand the DOM, event handling, and basic manipulation.
+
+
+
+
+Behavioral and Soft Skills
+Problem-Solving:
+- Be prepared to discuss how you approach problem-solving 
+and debugging.
+- Provide examples of challenging problems you have solved.
+
+Communication:
+- Clearly articulate your thoughts and explain technical 
+concepts in a way that is easy to understand.
+- Be prepared to discuss how you work in a team, handle 
+conflicts, and manage time.
+
+Continuous Learning:
+- Show that you are proactive in keeping your skills up to date.
+- Mention any relevant courses, certifications, or personal 
+projects you have undertaken recently.

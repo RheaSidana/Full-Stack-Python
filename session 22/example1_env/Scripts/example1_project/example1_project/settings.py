@@ -12,6 +12,15 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import sys
+
+# import logging
+
+# logging.debug('Debug Message')
+
+# if NameError:
+#    logging.error('Error Message')
+
 # from ..destinations.validator.password_validation import validate_password
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,9 +36,13 @@ MEDIA_URL = '/media/'
 SECRET_KEY = 'django-insecure-v&qdb79)hy6k498#sp*8v^_=h8e#1$kx6v21rs3r_z51rendxr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+# DEBUG = True
+INTERNAL_IPS = ["127.0.0.1", "localhost"]
 
-ALLOWED_HOSTS = []
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
@@ -57,6 +70,23 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+DEBUG_TOOLBAR_PANELS = [
+    'debug_toolbar.panels.history.HistoryPanel',
+    'debug_toolbar.panels.versions.VersionsPanel',
+    'debug_toolbar.panels.timer.TimerPanel',
+    'debug_toolbar.panels.settings.SettingsPanel',
+    'debug_toolbar.panels.headers.HeadersPanel',
+    'debug_toolbar.panels.request.RequestPanel',
+    'debug_toolbar.panels.sql.SQLPanel',
+    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    'debug_toolbar.panels.templates.TemplatesPanel',
+    'debug_toolbar.panels.alerts.AlertsPanel',
+    'debug_toolbar.panels.cache.CachePanel',
+    'debug_toolbar.panels.signals.SignalsPanel',
+    'debug_toolbar.panels.redirects.RedirectsPanel',
+    'debug_toolbar.panels.profiling.ProfilingPanel',
 ]
 
 ROOT_URLCONF = 'example1_project.urls'
@@ -145,3 +175,16 @@ STATICFILES_URL = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ENABLE_DEBUG_TOOLBAR = DEBUG 
+if ENABLE_DEBUG_TOOLBAR:
+    INSTALLED_APPS += [
+        "debug_toolbar",
+    ]
+    MIDDLEWARE += [
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
+    ]
+    # Customize the config to support turbo and htmx boosting.
+    # DEBUG_TOOLBAR_CONFIG = {
+    #     "ROOT_TAG_EXTRA_ATTRS": "data-turbo-permanent hx-preserve"
+    # }

@@ -1,0 +1,46 @@
+I have copy-pasted some set of files from the Blogging project 
+for your reference
+
+username: admin3
+password: a#D3%Rh
+email: admin3@example.com
+
+Blogging
+
+Admin Interface
+- allows developers to manage their application data with minimal effort
+- user-friendly
+- web-based interface to perform CRUD operations
+- customisable and extensible => suitable for various admin tasks
+
+advantageS:
+- automatic Interface Generation for managing models
+- user management - authentication, authorisation 
+- customization - to suit specific needs
+- search and filter - quickly find and manage data
+
+
+Ordering Fields: 
+field=[]
+this list enables us to access the fields in the Admin site,
+rest of the fields are not accessible 
+when rows are accessed separately
+- can be used for grouping as well
+
+exclude=[]
+this list enables us to not access the fields in the Admin site,
+rest of the fields are accessible 
+when rows are accessed separately
+
+fieldset - grouping fields together with the headings defined
+
+search_field=[]
+helps in searching all the rows that are correspondig to the partcular value.
+
+filters - applied when we know that a particular column can have 
+a certain set of values only
+
+editable List View
+- makes certain field of the rows, editable directly from the list views
+- saves time
+- no need to access the rows separately to edit then save them
